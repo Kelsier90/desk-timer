@@ -1,0 +1,18 @@
+.dt-timer-list-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    overflow: hidden;
+    width: $timer-width;
+    height: $timer-height;
+    position: relative;
+
+    &__content {
+      position: absolute;
+      top: 0;
+      transition: top 0.5s;
+    }
+  }
+}

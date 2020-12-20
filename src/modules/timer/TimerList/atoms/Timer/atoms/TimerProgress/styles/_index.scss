@@ -1,0 +1,29 @@
+@keyframes timer-progress-blinking-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dt-timer__progress-ring {
+  width: $timer-width;
+  height: $timer-height;
+
+  &--blinking {
+    animation: timer-progress-blinking-animation 0.8s linear infinite;
+  }
+
+  &__circle {
+    stroke: $primary-color;
+    stroke-width: $timer-circle-stroke-width;
+    fill: transparent;
+    transition: stroke-dashoffset 1s linear;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}

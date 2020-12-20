@@ -1,0 +1,13 @@
+.dt-timer__content {
+  position: absolute;
+  top: $timer-circle-stroke-width;
+  bottom: $timer-circle-stroke-width;
+  left: $timer-circle-stroke-width;
+  right: $timer-circle-stroke-width;
+  background-color: $background-light-color;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

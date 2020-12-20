@@ -1,0 +1,60 @@
+@keyframes label-input-border-before-animation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes label-input-border-after-animation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.dt-timer__content__label-wrapper {
+  color: $muted-text-color;
+  font-size: 1rem;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: $xsmall-button-size;
+
+  &__input-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &--focused::before,
+    &--focused::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      height: 0;
+      border-bottom: solid 2px $primary-color;
+    }
+
+    &--focused::before {
+      left: 0;
+      animation: label-input-border-before-animation 0.3s;
+    }
+
+    &--focused::after {
+      right: 0;
+      animation: label-input-border-after-animation 0.3s;
+    }
+
+    &__input {
+      width: 100%;
+      background: inherit;
+      color: inherit;
+      font-size: inherit;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

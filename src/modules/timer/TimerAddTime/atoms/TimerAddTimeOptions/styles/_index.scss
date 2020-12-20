@@ -1,0 +1,30 @@
+@keyframes dt-timer-add-time-wrapper__options-animation {
+  from {
+    transform: translateX(-2000px) scale(0.4);
+  }
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+.dt-timer-add-time-wrapper__options {
+  position: absolute;
+  top: -205px;
+  right: 0;
+  max-width: 100%;
+  background-color: $background-light-color;
+  border-radius: $border-radius;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.dt-timer-add-time-wrapper__options--visible {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  animation: dt-timer-add-time-wrapper__options-animation 0.4s;
+}
+
+.dt-timer-add-time-wrapper__options--hidden {
+  display: none;
+}

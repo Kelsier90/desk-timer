@@ -1,0 +1,41 @@
+.dt-timer__content__value__input-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(49, 49, 49, 0.5);
+}
+
+.dt-timer__content__value__input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+}
+
+.dt-timer__content__value__input-wrapper__input {
+  font-size: inherit;
+  color: inherit;
+  background: inherit;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: right;
+}
+
+.dt-timer__content__value__input-wrapper__up,
+.dt-timer__content__value__input-wrapper__down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dt-timer__content__value__input-wrapper__up {
+  top: -$xsmall-button-size;
+}
+
+.dt-timer__content__value__input-wrapper__down {
+  bottom: -$xsmall-button-size;
+}
