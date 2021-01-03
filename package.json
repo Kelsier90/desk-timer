@@ -4,7 +4,7 @@
   "homepage": "./",
   "repository": "https://github.com/Kelsier90/desk-timer",
   "author": {
-    "name": "Rubén",
+    "name": "Kelsier",
     "email": "rubenalb90@gmail.com",
     "url": "https://github.com/Kelsier90"
   },
@@ -29,7 +29,9 @@
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "electron-dev-win": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "dist:linux": "yarn build && electron-builder --linux"
+    "dist:linux": "yarn build && electron-builder --linux",
+    "dist:win": "yarn build && electron-builder --win",
+    "dist:mac": "yarn build && electron-builder --mac"
   },
   "eslintConfig": {
     "extends": [
@@ -58,8 +60,8 @@
     "wait-on": "^5.2.0"
   },
   "build": {
-    "appId": "com.kelsier90.desk-timer",
-    "productName": "Desk Timer",
+    "appId": "com.kelsier90.desktimers",
+    "productName": "Desk Timers",
     "linux": {
       "target": [
         "deb",
@@ -68,6 +70,20 @@
       ],
       "category": "Utility",
       "synopsis": "Desktop countdown timers"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "appx"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "appx": {
+      "applicationId": "Kelsier.DeskTimers",
+      "identityName": "43490Kelsier.DeskTimers",
+      "publisher": "CN=4C746B73-3873-4A34-918E-2EA03A61AE94"
     },
     "files": [
       "build/**/*",
